@@ -1,9 +1,10 @@
 #! /bin/bash
-#
+
+#This script generates password
+
 #colors
 red='\033[0;31m'
 green='\033[0;32m'
-yellow='\033[0;33m'
 nc='\033[0m'
 
 generate_password() {
