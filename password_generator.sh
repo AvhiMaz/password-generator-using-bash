@@ -12,12 +12,16 @@ generate_password() {
 	password=$(head /dev/urandom | tr -dc "$character" | head -c "$1")
 	echo "$password"
 }
+while true; do
 
-read -p "How much long password you need (Enter positive interger): " password_length
+	read -p "How much long password you need (Enter positive interger): " password_length
 
-if [[ $password_length =~ ^[0-9]+$ ]]; then
-	generated_password=$(generate_password "$password_length")
-	echo -e "${green}Generated Password: $generated_password${nc}"
-else
-	echo -e "${red}Enter a valid integer${nc}"
-fi
+	if [[ $password_length =~ ^[0-9]+$ ]]; then
+		generated_password=$(generate_password "$password_length")
+		echo -e "${green}Generated Password: $generated_password${nc}"
+		exit 0
+	else
+		echo -e "${red}Enter a valid integer${nc}"
+	fi
+
+done
