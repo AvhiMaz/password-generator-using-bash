@@ -18,6 +18,7 @@ This Bash script generates a random alphanumeric password of a specified length.
 
 ## Example
 
+![image](image.png)
 
 ## Notes
 
