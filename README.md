@@ -1,7 +1,7 @@
 # Password Generator
 
 This Bash script generates a random alphanumeric password of a specified length.
-![video](video.mp4)
+![video](hacker.gif)
 
 
 ## Usage
